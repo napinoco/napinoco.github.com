@@ -1,6 +1,13 @@
-body {
-    /*font-family: "Noto Sans JP";*/
-    /*font-family: sans-serif;*/
+/*body {
+    font-family: "Noto Sans JP";
+    /*font-family: sans-serif;
+}*/
+
+li {
+margin-bottom: 5px;
+}
+ul {
+margin-bottom: 5px;
 }
 
 .wy-menu-vertical a, .wy-menu-vertical .subnav a {
