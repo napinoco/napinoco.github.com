@@ -43,8 +43,9 @@
 * BBCPOP: A Sparse Doubly Nonnegative Relaxation of Polynomial Optimization Problems with Binary, Box and Complementarity Constraints, [https://sites.google.com/site/bbcpop1/](https://sites.google.com/site/bbcpop1/), March 2018.
 
 ### Refereed Journal Papers
+* **N. Ito**, S. Kim, M. Kojima, A. Takeda, and K.-C. Toh: "Algorithm 996: BBCPOP: A Sparse Doubly Nonnegative Relaxation of Polynomial Optimization Problems With Binary, Box, and Complementarity Constraints", ACM Transactions on Mathematical Software, Vol. 45, No. 3, Article 34 (To appear).
 * **N. Ito**, S. Kim, M. Kojima, A. Takeda, and K.-C. Toh:
-  ["Equivalences and differences in conic relaxations ofcombinatorial quadratic optimization problems"](https://rdcu.be/ZMVm), Journal of Global Optimization, 2018. Early access article.
+  ["Equivalences and differences in conic relaxations of combinatorial quadratic optimization problems"](https://rdcu.be/ZMVm), Journal of Global Optimization, 2018. Early access article.
 * **N. Ito**, A. Takeda, and K.-C. Toh: 
   ["A Unified Formulation and Fast Accelerated Proximal Gradient Method for Classification"](http://jmlr.org/papers/v18/16-274.html), 
   Journal of Machine Learning Research, 18(16):1-49, 
