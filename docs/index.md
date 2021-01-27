@@ -1,12 +1,15 @@
 # Naoki Ito
-* FAST RETAILING CO., LTD.
+* Fast Retailing Co., Ltd.
 * E-mail: napinocoatgmail.com (Previous addresses: naoki_ito mist.i.u-tokyo.ac.jp, pico a8.keio.jp)
 
 ---
 ## Employment
-* **Algorithm Team Member**
-    * FAST RETAILING CO., LTD.
-    * April 2018 - now.
+* **Data Scientist**
+    * Digital Business Transformation Services, Fast Retailing Co., Ltd.
+    * March 2020 - now.
+* **Data Scientist**
+    * Global Supply Chain Management, Fast Retailing Co., Ltd.
+    * April 2018 - February 2020.
 * **Research Fellow**
     * Japan Society for the Promotion of Science
     * April 2017 - March 2018.
@@ -43,9 +46,9 @@
 * BBCPOP: A Sparse Doubly Nonnegative Relaxation of Polynomial Optimization Problems with Binary, Box and Complementarity Constraints, [https://sites.google.com/site/bbcpop1/](https://sites.google.com/site/bbcpop1/), March 2018.
 
 ### Refereed Journal Papers
-* **N. Ito**, S. Kim, M. Kojima, A. Takeda, and K.-C. Toh: "Algorithm 996: BBCPOP: A Sparse Doubly Nonnegative Relaxation of Polynomial Optimization Problems With Binary, Box, and Complementarity Constraints", ACM Transactions on Mathematical Software, Vol. 45, No. 3, Article 34 (To appear).
+* **N. Ito**, S. Kim, M. Kojima, A. Takeda, and K.-C. Toh: ["Algorithm 996: BBCPOP: A Sparse Doubly Nonnegative Relaxation of Polynomial Optimization Problems With Binary, Box, and Complementarity Constraints"](https://dl.acm.org/doi/10.1145/3309988), ACM Transactions on Mathematical Software, Vol. 45, No. 3, Article 34.
 * **N. Ito**, S. Kim, M. Kojima, A. Takeda, and K.-C. Toh:
-  ["Equivalences and differences in conic relaxations of combinatorial quadratic optimization problems"](https://rdcu.be/ZMVm), Journal of Global Optimization, 2018. Early access article.
+  ["Equivalences and differences in conic relaxations of combinatorial quadratic optimization problems"](https://rdcu.be/ZMVm), Journal of Global Optimization, 2018.
 * **N. Ito**, A. Takeda, and K.-C. Toh: 
   ["A Unified Formulation and Fast Accelerated Proximal Gradient Method for Classification"](http://jmlr.org/papers/v18/16-274.html), 
   Journal of Machine Learning Research, 18(16):1-49, 
@@ -62,7 +65,12 @@
   Vancouver, Canada, 
   October, 2013.
 
-### Preprints
+### Preprints/Technical Reports
+* K. Fujii, **N. Ito**, S. Kim, M. Kojima, Y. Shinano, K.-C. Toh: 
+  ["Solving Challenging Large Scale QAPs"](https://opus4.kobv.de/opus4-zib/frontdoor/index/index/docId/8130), 
+  ZIB-Report urn:nbn:de:0297-zib-81303, 
+  Zuse Institute Berlin, 
+  January 2021.
 * **N. Ito**, S. Kim, M. Kojima, A. Takeda, and K.-C. Toh: 
   "BBCPOP: A Sparse Doubly Nonnegative Relaxation of Polynomial Optimization Problems with Binary, Box and Complementarity Constraints",
   [https://arxiv.org/abs/1804.00761](https://arxiv.org/abs/1804.00761), April 2018.
@@ -108,7 +116,7 @@
   Proceedings in the 4th IEEE International Conference on Smart Grid Communications (SmartGridComm), 
   Vancouver, Canada, 
   October, 2013.
-* and [talks in Japanese](achievement-ja).
+* and [talks in Japanese](achievement-ja.md).
 
 ##Honors and Awards
 * **Award for Research Excellence** - 
