@@ -4,12 +4,12 @@
 
 ---
 ## Employment
+* **Manager of Data Science**
+    * Fast Retailing Co., Ltd.
+    * September 2021 - now.
 * **Data Scientist**
-    * Digital Business Transformation Services, Fast Retailing Co., Ltd.
-    * March 2020 - now.
-* **Data Scientist**
-    * Global Supply Chain Management, Fast Retailing Co., Ltd.
-    * April 2018 - February 2020.
+    * Fast Retailing Co., Ltd.
+    * April 2018 - August 2021.
 * **Research Fellow**
     * Japan Society for the Promotion of Science
     * April 2017 - March 2018.
@@ -42,6 +42,10 @@
 
 
 ## Published works
+### Recent works
+* **N. Ito**: "A Study on the Algorithm and Implementation of SDPT3", Technical Report, [https://github.com/napinoco/A_study_on_SDPT3/releases](https://github.com/napinoco/A_study_on_SDPT3/releases), August 2025.
+* **N. Ito**: "Optimization Solver Benchmark", Benchmark Report, [https://napinoco.github.io/optimization-solver-benchmark/](https://napinoco.github.io/optimization-solver-benchmark/), August 2025.
+
 ### Software
 * BBCPOP: A Sparse Doubly Nonnegative Relaxation of Polynomial Optimization Problems with Binary, Box and Complementarity Constraints, [https://sites.google.com/site/bbcpop1/](https://sites.google.com/site/bbcpop1/), March 2018.
 
@@ -66,7 +70,10 @@
   October, 2013.
 
 ### Preprints/Technical Reports
-* K. Fujii, **N. Ito**, S. Kim, M. Kojima, Y. Shinano, K.-C. Toh: 
+* K. Fujii, **N. Ito**, S. Kim, M. Kojima, H.D. Mittelmann, Y. Shinano, and K.-C. Toh: 
+  "MatQapNB User Guide: A branch-and-bound program for QAPs in Matlab with the Newton-Bracketing method", 
+  [http://www.optimization-online.org/DB_HTML/2021/06/8467.html](http://www.optimization-online.org/DB_HTML/2021/06/8467.html), June 2021.
+* K. Fujii, **N. Ito**, S. Kim, M. Kojima, Y. Shinano, and K.-C. Toh: 
   ["Solving Challenging Large Scale QAPs"](https://opus4.kobv.de/opus4-zib/frontdoor/index/index/docId/8130), 
   ZIB-Report urn:nbn:de:0297-zib-81303, 
   Zuse Institute Berlin, 
