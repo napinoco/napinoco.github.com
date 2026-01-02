@@ -43,8 +43,8 @@
 
 ## Published works
 ### Recent works
-* **N. Ito**: "A Study on the Algorithm and Implementation of SDPT3", Technical Report, [https://github.com/napinoco/A_study_on_SDPT3/releases](https://github.com/napinoco/A_study_on_SDPT3/releases), August 2025.
 * **N. Ito**: "Optimization Solver Benchmark", Benchmark Report, [https://napinoco.github.io/optimization-solver-benchmark/](https://napinoco.github.io/optimization-solver-benchmark/), August 2025.
+* **N. Ito**: "A Study on the Algorithm and Implementation of SDPT3", arXiv preprint arXiv:2512.24623, [https://arxiv.org/abs/2512.24623](https://arxiv.org/abs/2512.24623), December 2025.
 
 ### Software
 * BBCPOP: A Sparse Doubly Nonnegative Relaxation of Polynomial Optimization Problems with Binary, Box and Complementarity Constraints, [https://sites.google.com/site/bbcpop1/](https://sites.google.com/site/bbcpop1/), March 2018.
@@ -102,7 +102,11 @@
   arXiv.org e-Print archive, 
   arxiv:1310.4962, 2013. 
 
-##Talks
+## Talks
+* **N. Ito**: 
+  "Applications of Optimization and Machine Learning in Apparel Supply Chain Management", 
+  [The 9th ISM-ISCT-NII-ZIB-NUS-MODAL Workshop on Optimization and Machine Learning for Data Science and Future Computing](https://sites.google.com/view/optds2025),
+  Tokyo, Japan, September 2025.
 * **N. Ito**, S. Kim, M. Kojima, A. Takeda, and K.-C. Toh: 
   "A Stable Lagrangian DNN Relaxation Method for Polynomial Optimization Problems," 
   SIAM Conference on Optimization, 
@@ -125,7 +129,7 @@
   October, 2013.
 * and [talks in Japanese](achievement-ja.md).
 
-##Honors and Awards
+## Honors and Awards
 * **Award for Research Excellence** - 
   Graduate School of Science for Open and Environment Systems, Keio University, 
   March 2015
