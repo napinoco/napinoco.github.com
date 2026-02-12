@@ -1,23 +1,24 @@
-name: PR Preview Build
+name: PR Preview Deployment
 
 on:
   pull_request:
     branches:
       - src
-    types: [opened, synchronize, reopened]
+    types: [opened, synchronize, reopened, closed]
 
 permissions:
+  contents: write
   pull-requests: write
-  contents: read
 
-# Prevent concurrent builds for same PR
+# Prevent concurrent deployments for same PR
 concurrency:
   group: preview-${{ github.event.pull_request.number }}
   cancel-in-progress: true
 
 jobs:
-  build-preview:
-    name: Build Preview
+  deploy-preview:
+    name: Deploy Preview
+    if: github.event.action != 'closed'
     runs-on: ubuntu-latest
 
     steps:
@@ -25,6 +26,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           ref: ${{ github.event.pull_request.head.sha }}
+          path: source
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -35,35 +37,86 @@ jobs:
         run: pip install mkdocs
 
       - name: Build site
+        working-directory: source
         run: mkdocs build
 
-      - name: Create preview archive
-        run: |
-          cd site
-          zip -r ../preview-site.zip .
-          cd ..
-
-      - name: Upload preview as artifact
-        uses: actions/upload-artifact@v4
+      - name: Checkout master branch
+        uses: actions/checkout@v4
         with:
-          name: preview-pr-${{ github.event.pull_request.number }}
-          path: preview-site.zip
-          retention-days: 30
+          ref: master
+          path: master
+
+      - name: Deploy to master branch subdirectory
+        working-directory: master
+        env:
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+        run: |
+          # Configure git
+          git config user.name 'github-actions[bot]'
+          git config user.email 'github-actions[bot]@users.noreply.github.com'
+
+          # Remove old preview if exists
+          rm -rf "pr-$PR_NUMBER"
+
+          # Copy new site
+          mkdir -p "pr-$PR_NUMBER"
+          cp -r ../source/site/* "pr-$PR_NUMBER/"
+
+          # Commit and push
+          git add "pr-$PR_NUMBER"
+          git commit -m "Deploy preview for PR #$PR_NUMBER"
+          git push origin master
 
       - name: Comment on PR
         uses: peter-evans/create-or-update-comment@v3
         with:
           issue-number: ${{ github.event.pull_request.number }}
           body: |
-            ## 📦 Preview Build Ready
+            ## 🚀 Preview Deployment
 
-            Your preview has been built successfully!
+            Your preview is ready!
 
-            **Download preview**: Click on "Actions" tab → Select this workflow run → Download the `preview-pr-${{ github.event.pull_request.number }}` artifact
+            **Preview URL**: https://napinoco.github.io/pr-${{ github.event.pull_request.number }}/
 
-            To view the preview:
-            1. Download and extract the zip file
-            2. Open `index.html` in your browser
+            The preview will update automatically when you push new commits.
 
             ---
-            *Built from commit ${{ github.event.pull_request.head.sha }}*
+            *Deployed from commit ${{ github.event.pull_request.head.sha }}*
+
+  cleanup-preview:
+    name: Cleanup Preview
+    if: github.event.action == 'closed'
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout master branch
+        uses: actions/checkout@v4
+        with:
+          ref: master
+
+      - name: Remove preview directory
+        env:
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+        run: |
+          # Configure git
+          git config user.name 'github-actions[bot]'
+          git config user.email 'github-actions[bot]@users.noreply.github.com'
+
+          # Remove preview directory
+          if [ -d "pr-$PR_NUMBER" ]; then
+            git rm -rf "pr-$PR_NUMBER"
+            git commit -m "Remove preview for closed PR #$PR_NUMBER"
+            git push origin master
+            echo "Preview cleaned up successfully"
+          else
+            echo "No preview directory found to clean up"
+          fi
+
+      - name: Comment cleanup status
+        uses: peter-evans/create-or-update-comment@v3
+        with:
+          issue-number: ${{ github.event.pull_request.number }}
+          body: |
+            ✅ **Preview Cleaned Up**
+
+            The preview deployment has been removed.

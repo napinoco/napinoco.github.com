@@ -54,14 +54,13 @@ The site automatically deploys to GitHub Pages via GitHub Actions:
 - **Target**: `master` branch
 - **URL**: https://napinoco.github.io/napinoco.github.com/
 
-### PR Preview Build (Automated)
-Pull requests to the `src` branch automatically build preview sites:
-- **Trigger**: PR opened or updated
+### PR Preview Deployment (Automated)
+Pull requests to the `src` branch automatically deploy preview sites:
+- **Trigger**: PR opened, updated, or closed
 - **Workflow**: `.github/workflows/pr-preview.yml`
-- **Output**: GitHub Actions Artifact (zip file)
-- **Access**: Download from Actions tab → Workflow run → Artifacts section
-- **Usage**: Extract zip and open `index.html` in browser
-- **Retention**: Artifacts are kept for 30 days
+- **Target**: `master` branch (subdirectory per PR)
+- **Preview URL**: https://napinoco.github.io/pr-{PR_NUMBER}/
+- **Cleanup**: Previews are automatically removed when PR is closed
 
 ### Manual Deployment (Legacy)
 Based on readme.txt, manual deployment can still be done:
