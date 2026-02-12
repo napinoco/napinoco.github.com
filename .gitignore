@@ -23,9 +23,6 @@ custom.css
 !docs/
 !docs/**
 
-# Project documentation
-CLAUDE.md
-
 # macOS system files
 .DS_Store
 .DS_Store?
