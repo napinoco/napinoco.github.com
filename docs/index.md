@@ -4,7 +4,7 @@
 
 ---
 ## Professional Experience
-* **Manager of Data Science**
+* **Data Science Manager**
     * Fast Retailing Co., Ltd.
     * September 2021 - now.
 * **Data Scientist**
