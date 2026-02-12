@@ -1,0 +1,44 @@
+name: Deploy from src branch
+
+on:
+  push:
+    branches:
+      - src
+  pull_request:
+    branches:
+      - src
+    types: [closed]
+
+jobs:
+  deploy:
+    # Only run on push or merged PRs
+    if: github.event_name == 'push' || (github.event_name == 'pull_request' && github.event.pull_request.merged == true)
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout src branch
+        uses: actions/checkout@v4
+        with:
+          ref: src
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Install MkDocs
+        run: |
+          pip install mkdocs
+
+      - name: Configure Git
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+
+      - name: Deploy to master branch
+        run: |
+          mkdocs gh-deploy --remote-branch master --force
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
