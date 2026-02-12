@@ -27,7 +27,6 @@ This is a personal academic website for Naoki Ito, built using MkDocs to generat
 
 - **src**: Main development branch (source code)
 - **master**: Production deployment branch (generated HTML)
-- **gh-pages**: PR preview deployment branch (preview sites per PR)
 
 ## Development Commands
 
@@ -55,13 +54,14 @@ The site automatically deploys to GitHub Pages via GitHub Actions:
 - **Target**: `master` branch
 - **URL**: https://napinoco.github.io/napinoco.github.com/
 
-### PR Preview Deployment (Automated)
-Pull requests to the `src` branch automatically generate preview deployments:
-- **Trigger**: PR opened, updated, or closed
+### PR Preview Build (Automated)
+Pull requests to the `src` branch automatically build preview sites:
+- **Trigger**: PR opened or updated
 - **Workflow**: `.github/workflows/pr-preview.yml`
-- **Target**: `gh-pages` branch (subdirectory per PR)
-- **Preview URL**: https://napinoco.github.io/napinoco.github.com/pr-{PR_NUMBER}/
-- **Cleanup**: Previews are automatically removed when PR is closed
+- **Output**: GitHub Actions Artifact (zip file)
+- **Access**: Download from Actions tab → Workflow run → Artifacts section
+- **Usage**: Extract zip and open `index.html` in browser
+- **Retention**: Artifacts are kept for 30 days
 
 ### Manual Deployment (Legacy)
 Based on readme.txt, manual deployment can still be done:
