@@ -1,0 +1,124 @@
+name: PR Preview Deployment
+
+on:
+  pull_request:
+    branches:
+      - src
+    types: [opened, synchronize, reopened, closed]
+
+permissions:
+  contents: write
+  pull-requests: write
+
+# Prevent concurrent deployments to same PR
+concurrency:
+  group: preview-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+jobs:
+  deploy-preview:
+    name: Deploy Preview
+    if: github.event.action != 'closed'
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout PR branch
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+          path: source
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Install MkDocs
+        run: pip install mkdocs
+
+      - name: Build site
+        working-directory: source
+        run: mkdocs build
+
+      - name: Checkout gh-pages branch
+        uses: actions/checkout@v4
+        with:
+          ref: gh-pages
+          path: gh-pages
+
+      - name: Deploy to gh-pages
+        working-directory: gh-pages
+        env:
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+        run: |
+          # Configure git
+          git config user.name 'github-actions[bot]'
+          git config user.email 'github-actions[bot]@users.noreply.github.com'
+
+          # Remove old preview if exists
+          rm -rf "pr-$PR_NUMBER"
+
+          # Copy new site
+          mkdir -p "pr-$PR_NUMBER"
+          cp -r ../source/site/* "pr-$PR_NUMBER/"
+
+          # Commit and push
+          git add "pr-$PR_NUMBER"
+          git commit -m "Deploy preview for PR #$PR_NUMBER"
+          git push origin gh-pages
+
+      - name: Comment on PR
+        uses: peter-evans/create-or-update-comment@v3
+        with:
+          issue-number: ${{ github.event.pull_request.number }}
+          body: |
+            ## 🚀 Preview Deployment
+
+            Your changes are ready to preview!
+
+            **Preview URL**: https://napinoco.github.io/napinoco.github.com/pr-${{ github.event.pull_request.number }}/
+
+            The preview will update automatically when you push new commits.
+
+            ---
+            *Deployed from commit ${{ github.event.pull_request.head.sha }}*
+          comment-tag: pr-preview
+
+  cleanup-preview:
+    name: Cleanup Preview
+    if: github.event.action == 'closed'
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout gh-pages branch
+        uses: actions/checkout@v4
+        with:
+          ref: gh-pages
+
+      - name: Remove preview directory
+        env:
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+        run: |
+          # Configure git
+          git config user.name 'github-actions[bot]'
+          git config user.email 'github-actions[bot]@users.noreply.github.com'
+
+          # Remove preview directory
+          if [ -d "pr-$PR_NUMBER" ]; then
+            git rm -rf "pr-$PR_NUMBER"
+            git commit -m "Remove preview for closed PR #$PR_NUMBER"
+            git push origin gh-pages
+            echo "Preview cleaned up successfully"
+          else
+            echo "No preview directory found to clean up"
+          fi
+
+      - name: Comment cleanup status
+        uses: peter-evans/create-or-update-comment@v3
+        with:
+          issue-number: ${{ github.event.pull_request.number }}
+          body: |
+            ✅ **Preview Cleaned Up**
+
+            The preview deployment has been removed.
+          comment-tag: pr-preview
