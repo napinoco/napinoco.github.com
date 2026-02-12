@@ -1,6 +1,28 @@
 # MkDocs build output
 site/
 
+# Generated HTML files
+*.html
+
+# Generated directories
+css/
+js/
+img/
+fonts/
+webfonts/
+search/
+achievement-ja/
+papers/
+
+# Generated assets
+sitemap.xml
+sitemap.xml.gz
+custom.css
+
+# Keep source files in docs/
+!docs/
+!docs/**
+
 # Project documentation
 CLAUDE.md
 
