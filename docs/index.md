@@ -3,13 +3,15 @@
 * E-mail: napinocoatgmail.com (Previous addresses: naoki_ito mist.i.u-tokyo.ac.jp, pico a8.keio.jp)
 
 ---
-## Employment
+## Professional Experience
 * **Manager of Data Science**
     * Fast Retailing Co., Ltd.
     * September 2021 - now.
 * **Data Scientist**
     * Fast Retailing Co., Ltd.
     * April 2018 - August 2021.
+
+## Research Experience
 * **Research Fellow**
     * Japan Society for the Promotion of Science
     * April 2017 - March 2018.
