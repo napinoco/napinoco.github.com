@@ -2,7 +2,7 @@ site_name: Naoki Ito
 theme: mkdocs
 nav:
   - CV: 'index.md'
-  - In Japan: 'achievement-ja.md'
+  - Research in Japan: 'achievement-ja.md'
 extra_css:
     # - "//fonts.googleapis.com/earlyaccess/notosansjp.css"
     # - "//fonts.googleapis.com/css?family=Open+Sans:600,800"
