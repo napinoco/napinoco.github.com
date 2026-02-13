@@ -6,41 +6,41 @@
 ## Professional Experience
 * **Data Science Manager**
     * Fast Retailing Co., Ltd.
-    * September 2021 - now.
+    * September 2021 - Present
 * **Data Scientist**
     * Fast Retailing Co., Ltd.
-    * April 2018 - August 2021.
+    * April 2018 - August 2021
 
 ## Research Experience
 * **Research Fellow**
     * Japan Society for the Promotion of Science
-    * April 2017 - March 2018.
+    * April 2017 - March 2018
 * **Research Assistant**
     * Graduate School of Information Science and Technology, The University of Tokyo
-    * April 2016 - March 2017.
+    * April 2016 - March 2017
 * **Research Assistant**
     * [Optimal Modeling Project](https://www.jst.go.jp/kisoken/crest/en/project/1111084/14532097.html) of JST CREST
-    * May 2015 - March 2017.
+    * May 2015 - March 2017
 * **Research Member**
     * [Energy Management System Project of JST CREST](http://www.jst.go.jp/kisoken/crest/en/research_area/ongoing/areah24-1.html), [Ohmori Team](http://ohmori-control.jp/)
-    * Jun 2013 - December 2014.
+    * June 2013 - December 2014
 
 ## Education
 * **Ph.D. in Information Science and Technology**
     * Graduate School of Information Science and Technology, The University of Tokyo, Japan
-    * April 2015 - March 2018.
-* **Research Student** 
-    * Institute of Statitical Mathematics, Japan
-    * April 2017 - March 2018.
+    * April 2015 - March 2018
+* **Research Student**
+    * Institute of Statistical Mathematics, Japan
+    * April 2017 - March 2018
 * **M. Eng.**
     * Graduate School of Science for Open and Environment Systems, Keio University, Yokohama, Japan
-    * April 2013 - March 2015.
+    * April 2013 - March 2015
 * **Special Research Student**
     * Graduate School of Information Science and Technology, The University of Tokyo, Japan
-    * April 2013 - March 2014.
+    * April 2013 - March 2014
 * **B. Eng.** Summa Cum Laude
     * Department of Administration Engineering, Keio University, Yokohama, Japan
-    * April 2009 - March 2013.
+    * April 2009 - March 2013
 
 
 ## Published works
@@ -132,9 +132,9 @@
 * and [talks in Japanese](achievement-ja.md).
 
 ## Honors and Awards
-* **Award for Research Excellence** - 
-  Graduate School of Science for Open and Environment Systems, Keio University, 
-  March 2015
-* **Graduating summa cum laude** - 
-  Keio University, 
-  March 2013
+* **Award for Research Excellence**
+    * Graduate School of Science for Open and Environment Systems, Keio University
+    * March 2015
+* **Graduated Summa Cum Laude**
+    * Keio University
+    * March 2013
