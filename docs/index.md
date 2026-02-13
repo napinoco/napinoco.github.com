@@ -30,7 +30,7 @@
     * Graduate School of Information Science and Technology, The University of Tokyo, Japan
     * April 2015 - March 2018
 * **Research Student**
-    * Institute of Statitical Mathematics, Japan
+    * Institute of Statistical Mathematics, Japan
     * April 2017 - March 2018
 * **M. Eng.**
     * Graduate School of Science for Open and Environment Systems, Keio University, Yokohama, Japan
@@ -132,9 +132,9 @@
 * and [talks in Japanese](achievement-ja.md).
 
 ## Honors and Awards
-* **Award for Research Excellence** - 
-  Graduate School of Science for Open and Environment Systems, Keio University, 
-  March 2015
-* **Graduating summa cum laude** - 
-  Keio University, 
-  March 2013
+* **Award for Research Excellence**
+    * Graduate School of Science for Open and Environment Systems, Keio University
+    * March 2015
+* **Graduated Summa Cum Laude**
+    * Keio University
+    * March 2013
